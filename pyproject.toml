@@ -9,6 +9,7 @@ dependencies = [
     "openai>=1.78.0",
     "pillow>=11.2.1",
     "pymupdf>=1.25.5",
+    "python-dotenv>=1.1.0",
     "python-multipart>=0.0.20",
     "uvicorn>=0.34.2",
 ]

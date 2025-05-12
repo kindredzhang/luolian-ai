@@ -1,14 +1,23 @@
 import os
 
+from dotenv import load_dotenv
+
+# 加载 .env 文件中的环境变量
+load_dotenv()
+
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_API_BASE = os.getenv("OPENAI_API_BASE")
 
 if not OPENAI_API_KEY or not OPENAI_API_BASE:
     raise ValueError("OPENAI_API_KEY 和 OPENAI_API_BASE 必须设置")
 
+print(OPENAI_API_KEY, OPENAI_API_BASE)
+
 import base64
-from openai import OpenAI
 from pathlib import Path
+
+from openai import OpenAI
+
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
